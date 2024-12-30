@@ -26,7 +26,7 @@ fn trim() {
         }
         writeln!(output, "{}", word).unwrap();
     }
-    println!("");
+    println!();
 }
 
 fn get_solutions() -> Solutions {
@@ -57,7 +57,7 @@ fn get_solutions() -> Solutions {
             solutions.push((points, word));
         }
     }
-    println!("");
+    println!();
     solutions.sort_by(|a, b| {
         use std::cmp::Ordering::*;
         if a.0 > b.0 { return Less }
@@ -66,11 +66,11 @@ fn get_solutions() -> Solutions {
         if a.1 < b.1 { return Less }
         Equal
     });
-    return Solutions {
+    Solutions {
         solutions,
         total_points,
         letters,
-    };
+    }
 }
 
 fn solve() {

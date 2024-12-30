@@ -15,7 +15,7 @@ impl Letters {
     }
 
     pub fn count(&self) -> usize {
-        return self.other.len() + 1;
+        self.other.len() + 1
     }
 }
 
@@ -40,7 +40,7 @@ pub fn is_valid(word: &str) -> bool {
             }
         }
     }
-    return true;
+    true
 }
 
 pub fn is_solution(word: &str, letters: &Letters) -> bool {
@@ -57,7 +57,7 @@ pub fn is_solution(word: &str, letters: &Letters) -> bool {
         }
         return false;
     }
-    return true;
+    true
 }
 
 pub fn is_pangram(word: &str, letter_count: usize) -> bool {
@@ -70,7 +70,7 @@ pub fn is_pangram(word: &str, letter_count: usize) -> bool {
             }
         }
     }
-    return false
+    false
 }
 
 pub fn points(word: &str, letter_count: usize) -> usize {
@@ -80,5 +80,5 @@ pub fn points(word: &str, letter_count: usize) -> usize {
     if is_pangram(word, letter_count) {
         return word.len() + 7
     }
-    return word.len()
+    word.len()
 }
